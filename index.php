@@ -11,8 +11,12 @@
     <form action="login.php" method="post">
         <label for="username">ชื่อผู้ใช้</label>
         <input type="text" name="username" placeholder="Username" required>
+        <br>
         <label for="password">รหัสผ่าน</label>
         <input type="password" name="password" placeholder="Password" required>
+        <br>
+        <input type="submit" name="submit" value="Login">
     </form>
+    <a href="register.php">Go to register</a>
 </body>
 </html>
