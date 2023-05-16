@@ -8,6 +8,11 @@
     <title>Login</title>
 </head>
 <body>
-    
+    <form action="login.php" method="post">
+        <label for="username">ชื่อผู้ใช้</label>
+        <input type="text" name="username" placeholder="Username" required>
+        <label for="password">รหัสผ่าน</label>
+        <input type="password" name="password" placeholder="Password" required>
+    </form>
 </body>
 </html>
