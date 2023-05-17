@@ -14,11 +14,11 @@
         <label for="password">Password</label>
         <input type="password" name="password" placeholder="Enter password" required>
         <br>
-        <label for="usaername">Username</label>
-        <input type="text" name="username" placeholder="Enter username" required>
+        <label for="firstname">Firstname</label>
+        <input type="text" name="firstname" placeholder="Enter firstname" required>
         <br>
-        <label for="usaername">Username</label>
-        <input type="text" name="username" placeholder="Enter username" required>
+        <label for="lastname">Lastname</label>
+        <input type="text" name="lastname" placeholder="Enter lastname" required>
         <br>
     </form>
 </body>
