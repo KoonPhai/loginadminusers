@@ -1,9 +1,33 @@
+<?php
+    session_start();
+    require_once "connection.php";
+    if (isset($_POST['submit'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
+
+        $user_check = "SELECT * FROM user WHERE username = '$username' LIMIT 1";
+        $result = mysqli_query($conn, $user_check);
+        $user = mysqli_fetch_assoc($result);
+
+        if ($user['username'] === $username) {
+            
+
+        }
+    }
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Register</title>
 </head>
 <body>
@@ -20,6 +44,8 @@
         <label for="lastname">Lastname</label>
         <input type="text" name="lastname" placeholder="Enter lastname" required>
         <br>
+        <input type="submit" name="submit" value="Submit">
     </form>
+    <a href="index.php">Go back to index</a>
 </body>
 </html>
