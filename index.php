@@ -1,3 +1,10 @@
+<?php
+    session_start()
+?>
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +15,22 @@
     <title>Login</title>
 </head>
 <body>
+
+    <?php if (isset($_SESSION['success'])) : ?>
+        <div class="success">
+            <?php
+                echo $_SESSION['success'];
+            ?>
+        </div>
+    <?php endif; ?>
+    <?php if (isset($_SESSION['error'])) : ?>
+        <div class="error">
+            <?php
+                echo $_SESSION['error'];
+            ?>
+        </div>
+    <?php endif; ?>
+
     <form action="login.php" method="post">
         <label for="username">ชื่อผู้ใช้</label>
         <input type="text" name="username" placeholder="Username" required>
@@ -20,3 +43,10 @@
     <a href="register.php">Go to register</a>
 </body>
 </html>
+
+<?php
+    if (isset($_SESSION['success']) || isset($_SESSION['error'])) {
+        session_destroy();
+    }
+
+?>
