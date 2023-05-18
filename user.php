@@ -15,7 +15,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
+    <h1>You are Member</h1>
+    <h3>Hi, <?php echo $_SESSION['user']; ?></h3>
+    <p><a href="logout.php">Logout</a></p>
+
+
 </body>
 </html>
 
